@@ -125,6 +125,12 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
+		Has_legacy_camera_hal1 struct {
+			Cflags []string
+			Overrides []string
+			Shared_libs  []string
+		}
+
 		Target_shim_libs struct {
 			Cppflags []string
 		}
@@ -293,6 +299,7 @@ type productVariables struct {
 
 	TargetFSConfigGen []string `json:",omitempty"`
 
+	Has_legacy_camera_hal1 *bool `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
 }
 
